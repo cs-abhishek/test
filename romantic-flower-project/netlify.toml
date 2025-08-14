@@ -1,9 +1,5 @@
 [build]
   publish = "."
-  command = ""
-
-[build.environment]
-  NODE_VERSION = "18"
 
 [[headers]]
   for = "/*"
@@ -14,11 +10,6 @@
     X-XSS-Protection = "1; mode=block"
 
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
-
-[[headers]]
   for = "/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
@@ -27,9 +18,3 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
-
-# Error page redirects
-[[redirects]]
-  from = "/404"
-  to = "/index.html"
-  status = 404

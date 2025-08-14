@@ -1,2 +1,2 @@
-# Fallback for any unmatched routes (if needed for SPA behavior)
-/*    /index.html   200
+# This file is intentionally minimal to avoid redirect conflicts
+# For a static HTML site, we typically don't need any redirects

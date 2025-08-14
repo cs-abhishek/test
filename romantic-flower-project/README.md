@@ -87,8 +87,59 @@ The project includes a `netlify.toml` configuration file for optimal deployment 
 
 ## Customization
 
-- **Colors**: You can modify the colors of the flowers and background in the `styles.css` file to suit your preferences.
+- **Colors**: You can modify the colors of the flowers and background in the `style.css` file to suit your preferences.
 - **Animations**: To adjust the animation speed or behavior, tweak the CSS properties under the `.flower-animation` class or any related animation classes.
+
+## Troubleshooting Netlify Deployment
+
+If you're getting a 404 "Page not found" error on Netlify:
+
+### 1. **Check File Structure**
+
+Ensure these files are in your root directory:
+
+- `index.html` (main file)
+- `style.css`
+- `script.js`
+- `netlify.toml`
+
+### 2. **Verify Netlify Build Settings**
+
+In your Netlify dashboard:
+
+- **Build command**: Leave empty
+- **Publish directory**: `.` (dot - meaning root directory)
+- **Functions directory**: Leave empty
+
+### 3. **Manual Deployment Steps**
+
+1. Delete the current deployment
+2. Create a new site
+3. Drag and drop your project folder (not a zip file)
+4. Wait for deployment to complete
+
+### 4. **Check Deployment Logs**
+
+- Go to your Netlify site dashboard
+- Click "Deploys" tab
+- Check the build log for any errors
+
+### 5. **Test Locally First**
+
+```bash
+# Test with a simple HTTP server
+python -m http.server 8000
+# or
+npx http-server .
+```
+
+### 6. **Common Issues**
+
+- **Case sensitivity**: Ensure file names match exactly (Linux servers are case-sensitive)
+- **File paths**: Use relative paths without `./` prefix
+- **Missing files**: Ensure all referenced files exist
+
+If you're still having issues, try deploying the `test.html` file first to verify basic functionality.
 
 ## License
 
