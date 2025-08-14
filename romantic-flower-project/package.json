@@ -1,0 +1,35 @@
+{
+  "name": "romantic-flower-project",
+  "version": "1.0.0",
+  "description": "A visually captivating web project that blends floral animations with a romantic color palette",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server .",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to Netlify'"
+  },
+  "keywords": [
+    "romantic",
+    "flowers",
+    "animation",
+    "svg",
+    "gsap",
+    "web-design",
+    "portfolio"
+  ],
+  "author": "Nipuna Lakruwan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nipuna-Lakruwan/romantic-flower-project.git"
+  },
+  "homepage": "https://github.com/Nipuna-Lakruwan/romantic-flower-project#readme",
+  "bugs": {
+    "url": "https://github.com/Nipuna-Lakruwan/romantic-flower-project/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}
